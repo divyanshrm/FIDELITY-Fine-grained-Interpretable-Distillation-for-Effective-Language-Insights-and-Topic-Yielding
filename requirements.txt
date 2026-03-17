@@ -1,0 +1,14 @@
+openai
+python-dotenv
+numpy
+pandas
+tqdm
+torch
+scikit-learn
+hdbscan
+umap-learn
+keybert
+gensim
+spacy
+nltk
+sentence-transformers
