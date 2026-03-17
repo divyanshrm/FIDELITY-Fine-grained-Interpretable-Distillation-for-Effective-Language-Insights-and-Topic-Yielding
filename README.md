@@ -1,4 +1,4 @@
-# Fidelity: Topic Detection Pipeline
+# Fidelity: Fine-grained Interpretable Distillation for Effective Language Insights and Topic Yielding
 
 Fidelity is a high-performance, modular topic modeling pipeline that combines traditional unsupervised clustering with state-of-the-art Large Language Models (LLMs) to generate semantic, human-readable topic labels for large document corpora.
 
