@@ -1,9 +1,13 @@
 import os
 import json
+import logging
 import numpy as np
 from tqdm import tqdm
 from openai import OpenAI
 from dotenv import load_dotenv
+
+logger = logging.getLogger(__name__)
+
 
 class LabelGenerator:
     """Class to prompt LLM APIs to generate semantic topics from clustered keywords."""
@@ -65,7 +69,7 @@ class LabelGenerator:
             response_data = json.loads(response_str)
             return response_data.get("topic", "Topic extraction failed")
         except (json.JSONDecodeError, Exception) as e:
-            print(f"Error parsing LLM response: {e}")
+            logger.error("Error parsing LLM response: %s", e)
             return "Topic extraction failed"
 
     def get_topics_from_keywords(self, cluster_labels: np.ndarray, all_keywords: list[str]) -> tuple[dict, dict]:

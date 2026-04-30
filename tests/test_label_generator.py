@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from topic_pipeline.label_generator import LabelGenerator
+from fidelity.label_generator import LabelGenerator
 
 class TestLabelGenerator(unittest.TestCase):
     

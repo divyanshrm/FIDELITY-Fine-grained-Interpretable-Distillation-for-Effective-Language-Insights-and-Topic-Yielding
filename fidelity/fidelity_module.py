@@ -1,5 +1,6 @@
 import os
 import ast
+import logging
 import pickle
 import pandas as pd
 import numpy as np
@@ -13,6 +14,9 @@ from .embedder import Embedder
 from .dimension_reducer import DimensionReducer
 from .clusterer import Clusterer
 from .label_generator import LabelGenerator
+
+
+logger = logging.getLogger(__name__)
 
 
 class FidelityModule:
@@ -228,7 +232,7 @@ class FidelityModule:
     def resource_building(self, docs_ids: list[dict], redo: bool = False, threshold: float = 0.85) -> pd.DataFrame:
         """Main entry point to process a corpus and build cluster resources."""
         if self.resource_built and not redo and self.check_resources():
-            print("Loading cached resources...")
+            logger.info("Loading cached resources...")
             self.load_resources()
             # Re-apply mappings to current dataframe
             df_mapped = self.output_df.copy()
@@ -237,7 +241,7 @@ class FidelityModule:
             odf['Scenario'] = self.scenario
             return odf
 
-        print("Building resources from scratch...")
+        logger.info("Building resources from scratch...")
         docs = [d['text_english'] for d in docs_ids]
         ids = [d['doc_id'] for d in docs_ids]
 

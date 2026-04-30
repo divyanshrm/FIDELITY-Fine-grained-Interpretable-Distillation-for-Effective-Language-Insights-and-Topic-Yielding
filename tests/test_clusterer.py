@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from topic_pipeline.clusterer import Clusterer
+from fidelity.clusterer import Clusterer
 
 class TestClusterer(unittest.TestCase):
     

@@ -1,13 +1,13 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from topic_pipeline.embedder import Embedder
+from fidelity.embedder import Embedder
 import numpy as np
 import torch
 
 class TestEmbedder(unittest.TestCase):
     
-    @patch('topic_pipeline.embedder.OpenAI')
-    @patch('topic_pipeline.embedder.load_dotenv')
+    @patch('fidelity.embedder.OpenAI')
+    @patch('fidelity.embedder.load_dotenv')
     def setUp(self, mock_load_dotenv, MockOpenAI):
         self.mock_openai_instance = MagicMock()
         MockOpenAI.return_value = self.mock_openai_instance

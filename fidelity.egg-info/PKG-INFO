@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: fidelity
+Version: 0.1.0
+Summary: Fine-grained Interpretable Distillation for Effective Language Insights and Topic Yielding
+Requires-Python: >=3.10
+Requires-Dist: openai
+Requires-Dist: python-dotenv
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: torch
+Requires-Dist: scikit-learn
+Requires-Dist: hdbscan
+Requires-Dist: umap-learn
+Requires-Dist: keybert
+Requires-Dist: gensim
+Requires-Dist: spacy
+Requires-Dist: nltk
+Requires-Dist: sentence-transformers

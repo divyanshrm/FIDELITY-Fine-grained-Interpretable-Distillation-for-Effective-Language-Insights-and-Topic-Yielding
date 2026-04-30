@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from topic_pipeline.dimension_reducer import DimensionReducer
+from fidelity.dimension_reducer import DimensionReducer
 
 class TestDimensionReducer(unittest.TestCase):
     

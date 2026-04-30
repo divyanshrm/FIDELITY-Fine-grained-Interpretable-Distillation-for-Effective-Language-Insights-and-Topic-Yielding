@@ -1,11 +1,11 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from topic_pipeline.keyword_extractor import KeywordExtractor
+from fidelity.keyword_extractor import KeywordExtractor
 
 class TestKeywordExtractor(unittest.TestCase):
     
-    @patch('topic_pipeline.keyword_extractor.Embedder')
-    @patch('topic_pipeline.keyword_extractor.KeyBERT')
+    @patch('fidelity.keyword_extractor.Embedder')
+    @patch('fidelity.keyword_extractor.KeyBERT')
     def setUp(self, MockKeyBERT, MockEmbedder):
         self.mock_keybert_instance = MagicMock()
         MockKeyBERT.return_value = self.mock_keybert_instance

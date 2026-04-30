@@ -1,10 +1,4 @@
-import os
-import sys
-
-# Add the parent directory to Python path
-sys.path.insert(0, os.path.abspath('.'))
-
-from topic_pipeline import FidelityModule
+from fidelity import FidelityModule
 
 def main():
     print("Testing FidelityModule Initialization...")
@@ -25,7 +19,7 @@ def main():
     ]
 
     # Sample 1000 random documents
-    dummy_docs = random.sample(non_empty_docs, 1000)
+    dummy_docs = random.sample(non_empty_docs, 100)
     
     try:
         print("Running resource building...")
